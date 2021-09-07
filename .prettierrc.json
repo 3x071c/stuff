@@ -1,0 +1,27 @@
+{
+	"printWidth": 120,
+	"tabWidth": 4,
+	"useTabs": true,
+	"singleQuote": true,
+	"quoteProps": "consistent",
+	"jsxSingleQuote": true,
+	"jsxBracketSameLine": true,
+	"arrowParens": "always",
+	"proseWrap": "never",
+	"endOfLine": "auto",
+	"vueIndentScriptAndStyle": true,
+	"svelteBracketNewLine": false,
+	"plugins": [
+		"./node_modules/prettier-plugin-pkg",
+		"./node_modules/prettier-plugin-sh",
+		"./node_modules/prettier-plugin-svelte"
+	],
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	]
+}

@@ -1,0 +1,68 @@
+{
+	"name": "stuff",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "Code snippets and stuff",
+	"author": {
+		"name": "Victor Homic",
+		"email": "dev@3x071c.com",
+		"url": "https://3x071c.com"
+	},
+	"license": "unlicense",
+	"private": true,
+	"engines": {
+		"node": ">= 12.22.1"
+	},
+	"os": [
+		"linux"
+	],
+	"scripts": {
+		"commit": "run-s commit:*",
+		"commit:1": "pnpm stage",
+		"commit:2": "cz",
+		"preinstall": "pnpx -y only-allow pnpm",
+		"prepare": "husky install",
+		"prettier:fix": "pnpm prettier:individual -- .",
+		"prettier:individual": "pnpm prettier:template -- --write",
+		"prettier:report": "pnpm prettier:template -- --check .",
+		"prettier:template": "prettier --plugin-search-dir=. --ignore-unknown --ignore-path .gitignore",
+		"pull": "git pull --all --rebase",
+		"push": "git push --prune -u origin HEAD",
+		"stage": "git add -A"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^13.1.0",
+		"@commitlint/config-conventional": "^13.1.0",
+		"commitizen": "^4.2.4",
+		"cross-env": "^7.0.3",
+		"cz-conventional-changelog": "^3.3.0",
+		"husky": "^7.0.2",
+		"lint-staged": "^11.1.2",
+		"npm-run-all": "^4.1.5",
+		"only-allow": "^1.0.0",
+		"prettier": "^2.3.2",
+		"prettier-plugin-pkg": "^0.10.0",
+		"prettier-plugin-sh": "^0.7.1",
+		"prettier-plugin-svelte": "^2.4.0",
+		"svelte": "^3.42.4"
+	},
+	"browserslist": {
+		"production": [
+			"defaults",
+			"Firefox ESR"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"lint-staged": {
+		"*": "pnpm prettier:individual"
+	}
+}

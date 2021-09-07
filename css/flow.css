@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Flow';
+	src: url('/flow-circular.woff2') format('woff2'), url('/flow-circular.woff') format('woff'),
+		url('/flow-circular.otf') format('opentype'), url('/flow-circular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+.flow {
+	font-family: 'Flow', 'wingdings', sans-serif;
+}
