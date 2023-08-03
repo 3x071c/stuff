@@ -44,7 +44,7 @@
 		"prettier-plugin-pkg": "^0.10.0",
 		"prettier-plugin-sh": "^0.7.1",
 		"prettier-plugin-svelte": "^2.4.0",
-		"svelte": "^3.42.4"
+		"svelte": "^3.49.0"
 	},
 	"browserslist": {
 		"production": [
