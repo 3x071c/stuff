@@ -224,13 +224,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # === End of generated rules ===
-# === Start of generic rules ===
-
-.husky/_/
-*.pem
-*cache
-.env*
-
-# === End of generic rules ===
-# === Start of specific rules ===
-# === End of specific rules ===
